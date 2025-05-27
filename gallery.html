@@ -17,13 +17,19 @@
     </header>
     <main>
         <p>This space is filled with moments that make me feel alive, safe, and seen.</p>
+        <!-- Add your image files in the images folder -->
+        <!-- Gallery Images -->
         <div class="gallery">
-            <!-- Add your image files in the images folder -->
-            <img src="WhatsApp Image 2024-09-07 at 18.32.53_18538f90.jpg" alt="Memory 1">
-            <img src="WhatsApp Image 2025-04-05 at 12.46.10_4f1a2786.jpg" alt="Memory 2">
-            <img src="Snapchat-1880120189.jpg" alt="Memory 3">
-            <img src="Snapchat-1976099545.jpg" alt="Memory 4">
-            <img src="Snapchat-479721992.jpg" alt="Memory 5">
+            <img src="WhatsApp Image 2024-09-07 at 18.32.53_18538f90.jpg" alt="Memory 1" onclick="enlarge(this)">
+            <img src="WhatsApp Image 2025-04-05 at 12.46.10_4f1a2786.jpg" alt="Memory 2" onclick="enlarge(this)">
+            <img src="Snapchat-1880120189.jpg" alt="Memory 3" onclick="enlarge(this)">
+            <img src="Snapchat-1976099545.jpg" alt="Memory 4" onclick="enlarge(this)">
+            <img src="Snapchat-479721992.jpg" alt="Memory 5" onclick="enlarge(this)">
+        </div>
+
+        <!-- Hidden image pop-up -->
+        <div id="lightbox" onclick="this.style.display='none'">
+            <img id="lightbox-img" src="">
         </div>
     </main>
     <footer>
@@ -32,6 +38,13 @@
         </p>
         <p>Elhan's memories 🖼️</p>
     </footer>
+    <script>
+        function enlarge(img) {
+            document.getElementById('lightbox-img').src = img.src;
+            document.getElementById('lightbox').style.display = 'flex';
+        }
+    </script>
+
 </body>
 
 </html>

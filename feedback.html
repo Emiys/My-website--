@@ -23,12 +23,19 @@
             <h1>💌 Leave Me a Message</h1>
     </header>
     <main>
-        <form action="#" method="POST">
-            <input type="text" name="name" placeholder="Your Name"><br>
-            <textarea name="message" placeholder="Your message or prayer..."></textarea><br>
-            <button type="submit">Send</button>
+        <form action="https://formspree.io/f/xeogyagn" method="POST">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Your Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+            <button type="submit">Send Feedback 💌</button>
         </form>
-        <p>(This form won't actually send yet — but you can imagine it works!)</p>
+        <p>I'd love to hear your thoughts, suggestions, or just a hello! 💜</p>
     </main>
     <footer>
         <p>&copy; 2025 Elhan's Space. These stories are mine. These moments are me. Please don't copy without my
