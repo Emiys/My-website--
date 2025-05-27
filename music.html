@@ -9,17 +9,85 @@
 
 <body>
     <header>
-        <a href="index.html">Home</a> |
-        <img src="ChatGPT Image May 26, 2025, 07_44_45 PM.png" width="100" alt="Elhan's Logo" class="logo">
-        <h1>🎶 My Soundtrack</h1>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="about.html">My Story</a> |
+            <a href="journal.html">Journal</a> |
+            <a href="faith.html">Faith</a> |
+            <a href="goals.html">Dreams</a> |
+            <a href="gallery.html">Memories</a> |
+            <a href="hidden.html">Secrets!!</a> |
+            <a href="feedback.html">Feedback</a> |
+            <a href="blog.html">Blog</a>
+
+
+            <img src="ChatGPT Image May 26, 2025, 07_44_45 PM.png" width="100" alt="Elhan's Logo" class="logo">
+            <h1>🎶 My Soundtrack</h1>
     </header>
+
     <main>
         <p>These songs speak what I sometimes can't say. They comfort me, hype me, and bring me back to God.</p>
-        <audio controls>
-            <source src="Hulvey_-_Love_Like_That_CeeNaija.com_.mp3" type="audio/mp3">
-            Your browser does not support the audio element?
-        </audio>
+
+        <div class="playlist">
+            <ul>
+                <li><button onclick="playSong('Hulvey_-_Love_Like_That_CeeNaija.com_.mp3')">💜 Love Like That -
+                        Hulvey</button></li>
+                <li><button onclick="playSong('AUD-20240817-WA0003.mp3')">🎙️ Never Get Used To This - Forrest Frank
+                        ft.JVKE </button></li>
+                <li><button
+                        onclick="playSong('Maverick-City-Music-feat-Annatoria-In-The-Room-Afro-Beat-Version-(CeeNaija.com).mp3')">🌍
+                        In The Room (Afro Version) - Maverick City</button></li>
+                <li><button
+                        onclick="playSong('Promises-feat.-Joe-L-Barnes-Naomi-Raines-Maverick-City-CeeNaija.com_.mp3')">🙏
+                        Promises - Maverick City</button></li>
+                <li><button onclick="playSong('Hillsong_United_-_Spirit_Lead_Me_Instrumental_.mp3')">🌊 Spirit Lead Me
+                        (Instrumental)</button></li>
+                <li><button onclick="playSong('Holy-Drill-D6-Stanley-Ifenna-Joy-in-Chaos-Extended.mp3')">🎧 Joy In Chaos
+                        - Holy Drill</button></li>
+                <li><button onclick="playSong('Forrest-Frank-feat-Connor-Price-UP-(CeeNaija.com).mp3')">🔥 UP - Forrest
+                        Frank ft. Connor Price</button></li>
+                <li><button onclick="playSong('Forrest_Frank_-_No_Longer_Bound_CeeNaija.com_.mp3')">⛓️ No Longer Bound -
+                        Forrest Frank</button></li>
+                <li><button
+                        onclick="playSong('Moses-Bliss-Ft-Festizie-Chizie-Neeja-SON-Music-Ajay-Asika-You-Are-Great-(TrendyBeatz.com).mp3')">🙌
+                        You Are Great - Moses Bliss & Team</button></li>
+                <li><button
+                        onclick="playSong('Moses_Bliss_Ft_Neeja_Festizie_Son_Music_Chizie_A-Jay_Asika_-_-_E_Dey_Flow.mp3')">💃
+                        E Dey Flow - Moses Bliss & Crew</button></li>
+                <li><button onclick="playSong('CalledOut_Music_-_Say_That_I_Love_You_CeeNaija.com_.mp3')">💌 Say That I
+                        Love You - CalledOut Music</button></li>
+                <li><button onclick="playSong('Chandler_Moore_-_Omemma.mp3')">🌺 Omemma - Chandler Moore</button></li>
+                <li><button onclick="playSong('Hulvey_-_Walk_CeeNaija.com_.mp3')">🚶 Walk - Hulvey</button></li>
+                <li><button onclick="playSong('Hulvey_-_Altar_CeeNaija.com_.mp3')">🔥 Altar - Hulvey</button></li>
+                <li><button onclick="playSong('Hulvey_-_Been_So_Good_You_Are_So_Beautiful__CeeNaija.com_.mp3')">💖 Been
+                        So Good - Hulvey</button></li>
+                <li><button
+                        onclick="playSong('Averly-Morillo-feat-Redimi2-Elevation-Worship-MESIAS-Remix-(CeeNaija.com).mp3')">👑
+                        Mesías (Remix) - Averly Morillo ft. Redimi2</button></li>
+                <li><button onclick="playSong('AUD-20240817-WA0004.mp3')">🎙️ Send That - Anike</button></li>
+                <li><button onclick="playSong('Holy-Drill-Because-He-Lives.mp3')">✝️ Because He Lives - Holy
+                        Drill</button></li>
+                <li><button onclick="playSong('Prinx-Emmanuel-El-(CeeNaija.com).mp3')">🎶 El - Prinx Emmanuel</button>
+                </li>
+                <li><button onclick="playSong('ssstik.io_1748048388184.mp3')">🎵 God of Creation..</button></li>
+                <li><button onclick="playSong('SON_Music_-_Darling_Jesus_CeeNaija.com_.mp3')">💕 Darling Jesus - SON
+                        Music</button></li>
+            </ul>
+
+            <audio id="audioPlayer" controls style="margin-top: 20px; width: 100%;">
+                <source src="" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
     </main>
+
+    <script>
+        function playSong(filename) {
+            const player = document.getElementById("audioPlayer");
+            player.src = filename;
+            player.play();
+        }
+    </script>
 </body>
 
 </html>
