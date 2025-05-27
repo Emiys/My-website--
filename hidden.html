@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <a href="index.html">Home</a> |
+    <meta charset="UTF-8">
+    <title>Secret Room</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function checkPassword() {
+            const input = document.getElementById('password').value;
+            if (input === 'grace') {
+                document.getElementById('secret').style.display = 'block';
+                document.getElementById('form').style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <main>
+        <div id="form">
+            <h2>🔐 Secret Room</h2>
+            <input type="password" id="password" placeholder="Enter password">
+            <button onclick="checkPassword()">Enter</button>
+        </div>
+        <div id="secret" style="display:none;">
+            <h3>🌌 My Safe Space</h3>
+            <p>This is where I leave my deepest thoughts, prayers, and tears — just between me and God.</p>
+        </div>
+    </main>
+</body>
+
+</html>
